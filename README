@@ -1,0 +1,30 @@
+Author:       Steely Morneau
+Project:      Compression
+Last updated: March 2012
+-----------------------------
+
+Summary:
+
+A Java program that compresses and uncompresses files using Huffman coding.
+
+
+Usage: 
+
+java Huffman (-c|-u) [-v] [-f]  infile outfile
+where:
+(-c|-u) stands for either "-c" (for compress), or "-u"(for uncompress)
+[-v] stands for an optional "-v" flag (for verbose)
+[-f] stands for an optional "-f" flag, that forces compression even if the compressed file will be larger than the original file
+infile is the input file
+outfile is the output file
+
+
+Verbose Output:
+
+If a file is compressed with the "-v" option, the following is printed to standard output:
+- The frequency of each character in the input file (print the ASCII values of the characters, instead of the characters themselves, to make this more readable for binary files)
+- The Huffman tree (see class notes on printing trees for pointers on how this can be done)
+- The Huffman codes for each character that has a code (characters which do not appear in the input file will not have codes.  Again, print the ASCII values of characters instead of the characters themselves)
+
+If a file is uncompressed with the "-v" option, the following is printed to standard output:
+- The Huffman tree
